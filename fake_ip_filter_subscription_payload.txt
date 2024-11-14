@@ -1,5 +1,6 @@
 payload:
-  - "*"
+  - "*" # Single label
+  #
   ## LAN START ##
   - ".test"
   - ".example"
@@ -10,6 +11,7 @@ payload:
   - ".localdomain"
   - "+.home.arpa"
   ## LAN END ##
+  #
   ## NTP START ##
   - "time.*.com"
   - "time.*.gov"
@@ -35,19 +37,37 @@ payload:
   - "+.pool.ntp.org"
   - "time1.cloud.tencent.com"
   ## NTP END ##
-  ## STUN START ##
+  #
+  ## STUN GENERIC START ##
   - "+.stun.*.*"
   - "+.stun.*.*.*"
   - "+.stun.*.*.*.*"
   - "+.stun.*.*.*.*.*"
-  ## STUN END ##
-  ## COMPUTER SCIENCE START ##
-  - "proxy.golang.org"
-  ## COMPUTER SCIENCE END ##
+  ## STUN GENERIC END ##
+  #
+  ## ROUTER GENERIC START ##
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  - "*.router.asus.com"
+  - "heartbeat.belkin.com"
+  ## ROUTER GENERIC END ##
+  #
+  ## GAMES GENERIC START ##
+  - "+.wotgame.cn"
+  - "+.wggames.cn"
+  - "+.wowsgame.cn"
+  - "+.wargaming.net"
+  - "*.finalfantasyxiv.com"
+  - "*.ffxiv.com"
+  - "*.square-enix.com"
+  ## GAMES GENERIC END ##
+  #
   ## GOOGLE START ##
+  - "proxy.golang.org"
   - "lens.l.google.com"
   - "stun.l.google.com"
   ## GOOGLE END ##
+  #
   ## APPLE START ##
   - "mesu.apple.com"
   - "swscan.apple.com"
@@ -56,26 +76,32 @@ payload:
   - "swcdn.apple.com"
   - "swdist.apple.com"
   ## APPLE END ##
+  #
   ## NINTENDO (SWITCH) START ##
   - "*.n.n.srv.nintendo.net"
   ## NINTENDO (SWITCH) END ##
+  #
   ## PLAYSTATION START ##
   - "+.stun.playstation.net"
   ## PLAYSTATION END ##
-  ## MICROSOFT OR XBOX START ##
+  #
+  ## MICROSOFT/XBOX START ##
   - "xbox.*.*.microsoft.com"
   - "*.*.xboxlive.com"
   - "+.msftncsi.com"
   - "+.msftconnecttest.com"
-  ## MICROSOFT OR XBOX END ##
+  ## MICROSOFT/XBOX END ##
+  #
   ## BILIBILI START ##
   - "*.mcdn.bilivideo.cn"
   ## BILIBILI END ##
+  #
   ## NETEASE START ##
   - "music.163.com"
   - "*.music.163.com"
   - "*.126.net"
   ## NETEASE END ##
+  #
   ## TENCENT START ##
   - "y.qq.com"
   - "*.y.qq.com"
@@ -88,48 +114,42 @@ payload:
   - "localhost.ptlogin2.qq.com" # https://github.com/Kr328/ClashForAndroid/blob/ffa559a57102ed8bc20eba41aa236a7764741bf9/core/src/main/golang/native/config/defaults.go#L10
   - "localhost.sec.qq.com"
   ## TENCENT END ##
+  #
   ## XIAOMI START ##
   - "*.xiami.com"
   - "+.market.xiaomi.com"
   ## XIAOMI END ##
+  #
   ## PLEX START ##
   - "+.plex.direct" # [bug] fake-ip mode encounters a bug when domains are ipv6-only
   ## PLEX END ##
-  ## ROUTER START ##
-  - "*.linksys.com"
-  - "*.linksyssmartwifi.com"
-  - "*.router.asus.com"
-  - "heartbeat.belkin.com"
-  ## ROUTER END ##
+  #
   ## NETFLIX START ##
   - "+.nflxvideo.net"
   ## NETFLIX END ##
+  #
   ## 千千音乐 START ##
   - "musicapi.taihe.com"
   - "music.taihe.com"
   ## 千千音乐 END ##
+  #
   ## KUGOU MUSIC START ##
   - "songsearch.kugou.com"
   - "trackercdn.kugou.com"
   ## KUGOU MUSIC END ##
+  #
   ## KUWO MUSIC START ##
   - "*.kuwo.cn"
   ## KUWO MUSIC END ##
-  ## MIGU AND CHINA MOBILE GROUP START ##
+  #
+  ## MIGU/CHINA MOBILE GROUP START ##
   - "*.music.migu.cn"
   - "music.migu.cn"
-  ## MIGU OR CHINA MOBILE GROUP END ##
+  ## MIGU/CHINA MOBILE GROUP END ##
+  #
   ## JOOX MUSIC START ##
   - "api-jooxtt.sanook.com"
   - "api.joox.com"
   - "joox.com"
   ## JOOX MUSIC END
-  ## GAMES START ##
-  - "+.wotgame.cn"
-  - "+.wggames.cn"
-  - "+.wowsgame.cn"
-  - "+.wargaming.net"
-  - "*.finalfantasyxiv.com"
-  - "*.ffxiv.com"
-  - "*.square-enix.com"
-  ## GAMES END ##
+  #
